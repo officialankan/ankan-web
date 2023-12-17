@@ -1,38 +1,19 @@
-# create-svelte
+# ankan-web
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
+This is a private web project used for hobby development.
 
-## Creating a project
+## Introduction
 
-If you're seeing this, you've probably already done this step. Congrats!
+Welcome to Ankan Web! This project is a personal web application developed by me for hobby purposes. It is not intended for public use or commercial purposes.
 
-```bash
-# create a new project in the current directory
-npm create svelte@latest
+## Contributing
 
-# create a new project in my-app
-npm create svelte@latest my-app
-```
+As this is a private project, contributions are not accepted at the moment. However, feel free to explore the code and use it as a reference for your own projects.
 
-## Developing
+## License
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+This project is licensed under the [MIT License](LICENSE).
 
-```bash
-npm run dev
+## Contact
 
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
-
-## Building
-
-To create a production version of your app:
-
-```bash
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+If you have any questions or suggestions regarding this project, please feel free to contact [Your Name] at [your-email@example.com].
