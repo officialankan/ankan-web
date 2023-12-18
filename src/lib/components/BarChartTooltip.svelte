@@ -17,7 +17,7 @@
 
 <div class="tooltip bg-gray-700 text-white text-s rounded py-1 px-2 shadow-md" 
      style="position: absolute; left: {xPosition}px; top: {y}px;" 
-     transition:fly bind:clientWidth={tooltipWidth}>
+     transition:fly|global bind:clientWidth={tooltipWidth}>
     <span>{formattedDate}: <strong>{data.steps.toLocaleString()}</strong> steps</span>
 </div>
 <style>

@@ -6,7 +6,7 @@
     let ticks = yScale.ticks(3);
 </script>
 
-<g class="axis-y" transition:fade={{ duration: 300 }}>
+<g class="axis-y" transition:fade|global={{ duration: 300 }}>
 {#each ticks as tick, i}
     <g transform="translate(0, {yScale(tick)})">
         <line
