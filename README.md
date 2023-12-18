@@ -16,4 +16,4 @@ This project is licensed under the [MIT License](LICENSE).
 
 ## Contact
 
-If you have any questions or suggestions regarding this project, please feel free to contact [Your Name] at [your-email@example.com].
+If you have any questions or suggestions regarding this project, please feel free to contact me.
