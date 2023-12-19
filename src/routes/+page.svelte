@@ -11,6 +11,7 @@
     <div class="text-center py-2 px-5">
         <h2 class="h2 text-center py-4">Spinning up a free tier deployment...</h2>
         <ProgressBar rounded="rounded-md" />
+        <p class="text-center py-4">If this takes more than 10s, my free tier will timeout but the backend will continue to spin up. <strong>Try refreshing!</strong>></p>
     </div>
 {:then dailySteps} 
     <div class="text-center py-2">
