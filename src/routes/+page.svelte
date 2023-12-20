@@ -2,11 +2,14 @@
     import BarChart from '$lib/components/BarChart.svelte';
     import diesel from '$lib/img/diesel.png';
     import { ProgressBar } from '@skeletonlabs/skeleton';
+    import LongestStreak from '$lib/components/LongestStreak.svelte';
 
     export let data;
     let width = 400;
+
 </script>
 
+<!-- BarChart -->
 {#await data.streamed.dailySteps}
     <div class="text-center py-2 px-5">
         <h2 class="h2 text-center py-4">Spinning up a free tier deployment...</h2>
@@ -22,7 +25,7 @@
     </div>
     <div class="text-center">
         <p>key to success is this guy &rarr;<img src={diesel} alt="diesel" class="w-32 rounded-full inline rotate-on-hover" /></p>
-</div>
+    </div>
 {:catch error}
 <div class="px-5 py-5">
     <aside class="alert variant-filled-error">
@@ -42,7 +45,8 @@
 </div>
 {/await}
 
-
+<!-- Longest Streak -->
+<LongestStreak /> 
 
 <style>
     .chart-container {
