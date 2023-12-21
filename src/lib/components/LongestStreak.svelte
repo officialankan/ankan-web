@@ -14,7 +14,7 @@
 
 <div class="grid grid-cols-2 gap-4">
     <div class="px-2 text-center">
-        <h4 class="h4">Check out my streaks by adjusting the slider!</h4>
+        <h4 class="h4">check out my streaks by adjusting the slider!</h4>
     </div>
     <div class="px-2">
         <RangeSlider name="range-slider" bind:value={threshold} min={10000} max={40000} step={1000} />
