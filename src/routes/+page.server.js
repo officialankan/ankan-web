@@ -1,6 +1,6 @@
 export async function load({ fetch }) {
     const fetchDailySteps = async () => {
-        const response = await fetch("https://mongofitness-api.onrender.com/api/v1/steps/", { credentials: "include" });
+        const response = await fetch("https://mongofitness-backend.delightfulsmoke-547405ed.swedencentral.azurecontainerapps.io/api/v1/steps", { credentials: "include" });
         if (!response.ok) {
             throw new Error(response);
         }

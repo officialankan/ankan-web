@@ -2,6 +2,7 @@
     import { scaleLinear, scaleTime } from "d3-scale";
     import { max, extent } from "d3-array";
     import { utcParse } from "d3-time-format";
+    import { ProgressBar } from '@skeletonlabs/skeleton';
 
     import BarChartAxisY from "$lib/components/BarChartAxisY.svelte";
     import BarChartAxisX from "$lib/components/BarChartAxisX.svelte";
@@ -9,6 +10,7 @@
 
     export let width;
     export let data;
+
     let hoverData;
     let focused;
 
