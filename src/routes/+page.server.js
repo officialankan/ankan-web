@@ -7,9 +7,21 @@ export async function load({ fetch }) {
         const data = await response.json();
         return data;
     }
+    const fetchLongestStreak = async () => {
+        const threshold = 10000;
+        const url = `https://mongofitness-backend.delightfulsmoke-547405ed.swedencentral.azurecontainerapps.io/api/v1/steps/streak/?threshold=${threshold}`; 
+        const response = await fetch(url, { credentials: "include" });
+        if (!response.ok) {
+            throw new Error(response);
+        }
+        const data = await response.json();
+        return data;
+    }
+            
     return {
         streamed: {
-            dailySteps: fetchDailySteps()
+            dailySteps: fetchDailySteps(),
+            longestStreak: fetchLongestStreak(),
         }
     }
 }
