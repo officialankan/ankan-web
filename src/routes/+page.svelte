@@ -18,8 +18,9 @@
     here's a bar chart of my daily steps
 </h4>
 {#await data.streamed.dailySteps}
-    <div class="px-8 py-1">
+    <div class="px-8 py-5 text-center">
         <ProgressBar class="rounded-md" />
+        <p>if this takes more than 10s, try refreshing again. this is me being cheap and deploying to free tiers...</p>
     </div>
 {:then data}
     <div class="chart-container" role="img" bind:clientWidth={width}>
@@ -35,8 +36,9 @@
     </div>
     <div>
         {#await data.streamed.longestStreak}
-            <div class="px-8 py-1">
+            <div class="px-8 py-5 text-center">
                 <ProgressBar class="rounded-md" />
+                <p>if this takes more than 10s, try refreshing again. this is me being cheap and deploying to free tiers...</p>
             </div>
         {:then streak}
             <LongestStreak {streak} />

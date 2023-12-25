@@ -3,7 +3,7 @@
     export let yScale;
     export let width;
 
-    let ticks = yScale.ticks(3);
+    let ticks = yScale.ticks(2);
 </script>
 
 <g class="axis-y" transition:fade={{ duration: 300 }}>
@@ -14,8 +14,10 @@
             y1="0" 
             x2={width} 
             y2="0"
+            stroke-width="2"
+            stroke-dasharray={i === 0 ? "0" : "4"}
         />
-        <text x="0" y="0" dy="-6" text-anchor="center">
+        <text x="0" y="0" dy="-6" text-anchor="center" style="font-size: medium;">
             {tick.toLocaleString()}
         </text>
     </g>

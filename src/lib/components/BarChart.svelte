@@ -21,7 +21,7 @@
         left: 15
     };
 
-    let height = 400;
+    let height = 200;
     let innerHeight = height - margins.top - margins.bottom;
     $: innerWidth = width - margins.left - margins.right;
 
