@@ -1,6 +1,9 @@
+import { PUBLIC_API_URL } from "$env/static/public";
+
 export async function load({ fetch }) {
     const fetchDailySteps = async () => {
-        const response = await fetch("https://mongofitness-backend.delightfulsmoke-547405ed.swedencentral.azurecontainerapps.io/api/v1/steps", { credentials: "include" });
+        const url = PUBLIC_API_URL + "/api/v1/steps";
+        const response = await fetch(url, { credentials: "include" });
         if (!response.ok) {
             throw new Error(response);
         }
@@ -9,7 +12,8 @@ export async function load({ fetch }) {
     }
     const fetchLongestStreak = async () => {
         const threshold = 10000;
-        const url = `https://mongofitness-backend.delightfulsmoke-547405ed.swedencentral.azurecontainerapps.io/api/v1/steps/streak/?threshold=${threshold}`; 
+        const url = PUBLIC_API_URL + "/api/v1/steps/streak/?threshold=" + threshold;
+        console.log(url);
         const response = await fetch(url, { credentials: "include" });
         if (!response.ok) {
             throw new Error(response);

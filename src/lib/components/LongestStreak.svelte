@@ -1,10 +1,11 @@
 <script>
     import { RangeSlider, ProgressRadial } from '@skeletonlabs/skeleton';
+    import { PUBLIC_API_URL } from "$env/static/public";
     let threshold = 10000;
     export let streak;
 
     const getStreak = async (threshold) => {
-        const url = `https://mongofitness-backend.delightfulsmoke-547405ed.swedencentral.azurecontainerapps.io/api/v1/steps/streak/?threshold=${threshold}`; 
+        const url = PUBLIC_API_URL + "/api/v1/steps/streak/?threshold=" + threshold;
         const res = await fetch(url);
         const data = await res.json();
         streak = data;
