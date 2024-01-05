@@ -13,7 +13,6 @@ export async function load({ fetch }) {
     const fetchLongestStreak = async () => {
         const threshold = 10000;
         const url = PUBLIC_API_URL + "/api/v1/steps/streak/?threshold=" + threshold;
-        console.log(url);
         const response = await fetch(url, { credentials: "include" });
         if (!response.ok) {
             throw new Error(response);
