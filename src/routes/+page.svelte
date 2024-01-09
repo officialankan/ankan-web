@@ -15,17 +15,22 @@
 </div>
 
 <h4 class="h4 text-center">
-    here's a bar chart of my daily steps
+    here's a bar chart of my daily steps over the past 90 days
 </h4>
+<p class="text-center">
+    <small>
+        <em>hover over the bars to see the exact number of steps. strava colored bars include a strava activity!</em>
+    </small>
+</p>
 <div class="py-5">
-    {#await data.streamed.dailySteps}
+    {#await data.streamed.barChartData}
         <div class="px-8 text-center">
             <ProgressBar class="rounded-md" />
             <p>if this takes more than 10s, try refreshing again. this is me being cheap and deploying to free tiers...</p>
         </div>
     {:then data}
         <div class="chart-container" role="img" bind:clientWidth={width}>
-            <BarChart {width} {data}/>
+            <BarChart {width} {data} />
         </div>
     {:catch error}
         <p>{error.message}</p>
@@ -34,7 +39,10 @@
 
 <div class="grid grid-rows-2 px-12 py-5 text-center">
     <div>
-        <h4 class="h4">check out my streaks by adjusting the slider!</h4>
+        <h4 class="h4">
+            <span class="text-secondary-500"><strong>it's all about consistency!</strong></span>
+            check out my all-time streaks by adjusting the slider below &darr;
+        </h4>
     </div>
     <div>
         {#await data.streamed.longestStreak}
