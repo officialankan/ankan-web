@@ -17,7 +17,7 @@
 </script>
 
 <RangeSlider name="range-slider" bind:value={threshold} min={10000} max={40000} step={1000} />
-<p class="inline">my longest streak with {threshold.toLocaleString()} steps is: </p>
+<p class="inline">my longest streak with {threshold.toLocaleString()} steps is </p>
 {#await streak}
     <ProgressRadial width="w-4" class="inline-flex"/>
 {:then longestStreak} 
